@@ -1,0 +1,11 @@
+# Gema-Martinez
+PIB <- data.frame(read.csv("C:\\Users\\SALA-D30\\Downloads\\PIB_Mexico.csv"))
+
+Serie1 <- ts(PIB[2:12,], frequency=1, start=(1980))
+Serie2 <- ts(PIB[13:22,], frequency=1, start=(1991))
+Serie3 <- ts(PIB[23:32,], frequency=1, start=(2001))
+Serie4 <- ts(PIB[33:37,], frequency=1, start=(2011))
+
+base <- data.frame(Serie1, Serie2, Serie3, Serie4)
+plot(cbind(Serie2, Serie3))
+plot(cbind(Serie1, Serie4))
